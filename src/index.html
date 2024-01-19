@@ -7,5 +7,51 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body></body>
+  <body>
+    <!-- Form Section -->
+    <form id="form">
+      <!-- Character Name -->
+      <label for="charName">Character Name:</label>
+      <input type="text" id="charName"><br>
+      <!-- Faction Choice -->
+      <label for="jedi">Jedi</label>
+      <input type="radio" name="faction" id="jedi">
+      <label for="sith">Sith</label>
+      <input type="radio" name="faction" id="sith"><br>
+      <!-- Lightsaber Color -->
+      <label for="color">Lightsaber color:</label>
+      <select name="color" id="color">
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="red">Red</option>
+        <option value="purple">Purple</option>
+      </select><br>
+      <!-- Submit Button -->
+      <input type="submit" value="Submit">
+    </form>
+    <!-- Table Section -->
+    <table>
+      <thead>
+        <tr>
+          <th>Planet</th>
+          <th>Environment</th>
+          <th>Population</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tatooine</td><td>Desert</td><td>200,000</td>
+        </tr>
+        <tr>
+          <td>Hoth</td><td>Ice</td><td>0</td>
+        </tr>
+        <tr>
+          <td>Endor</td><td>Forest</td><td>30,000,000</td>
+        </tr>
+        <tr>
+          <td>Mustafar</td><td>Lava</td><td>10,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
