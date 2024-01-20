@@ -31,6 +31,21 @@
 // Ex.:
 //   buildWordChain(['zoo', 'sour', 'racket', 'octos']);
 //   => ['zoo', 'octos', 'sour', 'racket']
-function buildWordChain(words) {}
+function buildWordChain(words) {
+    let result = [words.shift()]
+    let searchExhausted = false
+    while (words.length > 0 && !searchExhausted) {
+      let word = result[result.length-1]
+      let letter = word[word.length-1].toLowerCase()
+      let nextWord = words.filter((w, idx) => w[0].toLowerCase() === letter)[0]
+      if (nextWord === undefined) {
+        searchExhausted = true
+      } else {
+        result.push(words.splice(words.indexOf(nextWord), 1)[0])
+      }
+    }
+    return result
+  }
+  
 
 export { buildWordChain };
